@@ -25,16 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initViews();
         initClickers();
-        btnB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                YoYo.with(Techniques.Shake)
-                        .duration(300)
-                        .repeat(3)
-                        .playOn(findViewById(R.id.btn_button));
-                btnB.setBackgroundResource(R.drawable.correct);
-            }
-        });
+
     }
 
     private void initViews() {
@@ -42,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         dog = findViewById(R.id.dog_btn);
         cat=findViewById(R.id.cat_btn);
         squirrel=findViewById(R.id.squirrel_btn);
-        btnB = findViewById(R.id.btn_button);
 
     }
 
