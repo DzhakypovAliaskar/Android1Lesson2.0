@@ -14,15 +14,15 @@ import com.daimajia.androidanimations.library.YoYo;
 
 
 public class MainActivity extends AppCompatActivity {
-        ImageView imageView;
-        Button dog,cat,squirrel,btnB;
-        boolean isDog,isCat,isSquirrel;
-        CountDownTimer countDownTimer;
+    ImageView imageView;
+    Button dog,cat,squirrel;
+    boolean isDog,isCat,isSquirrel;
+    CountDownTimer countDownTimer;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
         initViews();
         initClickers();
 
@@ -65,12 +65,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isDog){
-                    countDownTimer = new CountDownTimer(5000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Tada)
-                                    .duration(700)
-                                    .repeat(5)
+                                    .duration(300)
+                                    .repeat(3)
                                     .playOn(findViewById(R.id.dog_btn));
                             dog.setBackgroundResource(R.drawable.correct);
                         }
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }.start();
 
-                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_LONG).show();
                 }else {
-                    countDownTimer = new CountDownTimer(5000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Shake)
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isCat){
-                    countDownTimer = new CountDownTimer(3000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Tada)
@@ -120,9 +120,9 @@ public class MainActivity extends AppCompatActivity {
                             cat.setBackgroundResource(R.drawable.deffault);
                         }
                     }.start();
-                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_LONG).show();
                 }else {
-                    countDownTimer = new CountDownTimer(3000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Shake)
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isSquirrel){
-                    countDownTimer = new CountDownTimer(3000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Tada)
@@ -155,12 +155,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                         @Override
                         public void onFinish() {
-                            squirrel.setBackgroundResource(R.drawable.deffault);
+                            cat.setBackgroundResource(R.drawable.deffault);
                         }
                     }.start();
-                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Верно", Toast.LENGTH_LONG).show();
                 }else {
-                    countDownTimer = new CountDownTimer(3000,1000) {
+                    countDownTimer = new CountDownTimer(3000,3000) {
                         @Override
                         public void onTick(long l) {
                             YoYo.with(Techniques.Shake)
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         @Override
                         public void onFinish() {
-                            squirrel.setBackgroundResource(R.drawable.deffault);
+                            cat.setBackgroundResource(R.drawable.deffault);
                         }
                     }.start();
                     Toast.makeText(MainActivity.this, "Не верно", Toast.LENGTH_SHORT).show();
